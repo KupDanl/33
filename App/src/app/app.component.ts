@@ -11,7 +11,7 @@ export class AppComponent {
   input2: number;
   result: number;
   noValidInp: boolean = false;
-  showResult: boolean = false;
+  hiddenRes: boolean = true;
 
   onInput1(e) {
     this.input1 = Number(e.target.value);
@@ -25,7 +25,7 @@ export class AppComponent {
    if(this. input1 === undefined || this.input2 === undefined) {
       this.noValidInp = true;
     } else {
-      this.showResult = true;
+      this.hiddenRes = false;
       this.result = this.input1 + this.input2;
     }  
   }
